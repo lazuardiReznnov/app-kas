@@ -36,4 +36,8 @@ class Akun_model extends CI_Model
         $this->db->where('id_akun', $id_akun);
         $this->db->delete($this->table);
     }
+    public function nameExist()
+    {
+        return $this->db->get_where($this->table, array('id_akun' => $this->input->post('id_akun')))->num_rows();
+    }
 }

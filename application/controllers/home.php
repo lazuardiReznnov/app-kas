@@ -9,7 +9,7 @@ class home extends CI_Controller
     public function index()
     {
         $controller = 'home/index';
-        $data['tittle'] = 'Home';
+        $data['title'] = 'Home';
         $this->templates->loadTemp($controller, $data);
     }
 }

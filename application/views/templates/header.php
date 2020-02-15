@@ -9,8 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url('asset/css/bootstrap.min.css'); ?>">
     <link href="<?= base_url('asset/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-    <title><?= $title; ?></title>
+    <link rel="stylesheet" href="<?= base_url('asset/css/stylepage.css'); ?>" <title><?= $title; ?></title>
 </head>
 
 <body>

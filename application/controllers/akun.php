@@ -18,6 +18,12 @@ class Akun extends CI_Controller
             $data['list_akun'] = $this->akun->getallAkun();
             $controler = 'akun/index';
             $this->templates->loadTemp($controler, $data);
+        } elseif ($this->akun->nameExist()) {
+            $data['title'] = ' AKUN';
+            $data['list_akun'] = $this->akun->getallAkun();
+            $controler = 'akun/index';
+            $this->templates->loadTemp($controler, $data);
+            $this->session->set_flashdata('error', 'Terdaftar');
         } else {
             $this->akun->addAkun();
             $this->session->set_flashdata('success', 'Ditambahkan');
