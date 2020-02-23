@@ -6,6 +6,7 @@ class transaksi extends CI_Controller
     {
         parent::__construct();
         $this->load->model('transaksi_model', 'transaksi');
+        $this->load->model('Akun_model', 'akun');
     }
 
     public function index()
@@ -13,6 +14,7 @@ class transaksi extends CI_Controller
         $data['title'] = 'transaksi';
         $controler = 'transaksi/index';
         $data['list_trans'] = $this->transaksi->gettransall();
+        $data['akun'] = $this->akun->getAllAkun();
         $this->templates->loadTemp($controler, $data);
     }
 }
